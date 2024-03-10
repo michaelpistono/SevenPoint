@@ -8,7 +8,6 @@ import datetime
 import xlsxwriter
 
 
-
 def get_current_datetime():
     import datetime
     return datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -29,7 +28,6 @@ def list(pt_list):
         print()
     input("Press Enter to return to the menu...")
     print() # Wait for user input before returning to the menu
-
 
 
 def add(pt_list, names_list):
@@ -73,6 +71,8 @@ def add(pt_list, names_list):
 
     input("Press Enter to return to the menu...")
     print()
+
+
 def report(names_list):
     header = names_list[0]
     max_lengths = [max(map(len, map(str, col))) for col in zip(*names_list)]
@@ -88,10 +88,6 @@ def report(names_list):
         print()
     input("Press Enter to return to the menu...")# Wait for user input before returning to the menu
     print()
-
-
-
-
 
 
 def delete(pt_list, names_list):
@@ -135,11 +131,6 @@ def delete(pt_list, names_list):
 
 
 
-
-
-
-
-
 def display_menu():
     if os.name == 'nt':  # Windows
         os.system('cls')
@@ -160,7 +151,6 @@ def display_menu():
     print()
     print()
     print()
-
 
 
 
@@ -214,8 +204,6 @@ def save_to_excel(names_list):
         print(f"Employee report saved to {excel_file_path}")
     except Exception as e:
         print(f"An error occurred while saving the report: {e}")
-
-
 
 
 
